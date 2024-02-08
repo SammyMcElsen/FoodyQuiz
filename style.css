@@ -2,9 +2,10 @@
   margin: 0;
   padding: 0;
   border: none;
-  font-family: Arial, sans-serif;
+  font-family: Tahoma, sans-serif;
 }
 
 body {
   font-size: 14px;
+  background-color: rgb(255, 234, 237);
 }
