@@ -229,6 +229,11 @@ function displayQuestion() {
   const optionsElement = document.createElement('div');
   optionsElement.className = 'options';
 
+  const questionNumberElement = document.createElement('div');
+  questionNumberElement.className = 'questionNumber';
+  questionNumberElement.innerHTML = (currentQuestion + 1) + "/" + quizData.length;
+
+
   const shuffledOptions = [...questionData.options];
   shuffleArray(shuffledOptions);
 
@@ -249,6 +254,7 @@ function displayQuestion() {
   }
 
   quizContainer.innerHTML = '';
+  quizContainer.appendChild(questionNumberElement);
   quizContainer.appendChild(questionElement);
   quizContainer.appendChild(optionsElement);
 }
@@ -282,6 +288,7 @@ function displayResult() {
   retryButton.style.display = 'inline-block';
   showAnswerButton.style.display = 'inline-block';
   resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}!`;
+  resultContainer.className = "score";
 }
 
 function retryQuiz() {
@@ -293,6 +300,7 @@ function retryQuiz() {
   retryButton.style.display = 'none';
   showAnswerButton.style.display = 'none';
   resultContainer.innerHTML = '';
+  resultContainer.className = "score";
   displayQuestion();
 }
 
@@ -318,6 +326,7 @@ function showAnswer() {
     <p>Incorrect Answers:</p>
     ${incorrectAnswersHtml}
   `;
+  resultContainer.className = "score";
 }
 
 submitButton.addEventListener('click', checkAnswer);
