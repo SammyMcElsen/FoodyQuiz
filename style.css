@@ -8,13 +8,12 @@
 body {
   font-size: 14px;
   background-color: rgb(255, 234, 237);
-  display: flex;
-  justify-content: center;
 }
 .container {
   width: 450px;
   padding: 20px;
   margin-top: 80px;
+  margin-left: 520px;
   background-color: lavenderblush;
   box-shadow: 0 2px 4px rgb(225, 195, 200);
   border-radius: 20px;
