@@ -210,6 +210,7 @@ const showAnswerButton = document.getElementById('showAnswer');
 
 let currentQuestion = 0;
 let score = 0;
+let health = 10;
 let incorrectAnswers = [];
 
 function shuffleArray(array) {
@@ -275,11 +276,15 @@ function checkAnswer() {
     if (answer === quizData[currentQuestion].answer) {
       score++;
     } else {
+      health = health - 1;
       incorrectAnswers.push({
         question: quizData[currentQuestion].question,
         incorrectAnswer: answer,
         correctAnswer: quizData[currentQuestion].answer,
       });
+      if (health == 0) {
+        displayResult();
+      }
     }
     currentQuestion++;
     selectedOption.checked = false;
@@ -296,13 +301,19 @@ function displayResult() {
   submitButton.style.display = 'none';
   retryButton.style.display = 'inline-block';
   showAnswerButton.style.display = 'inline-block';
-  resultContainer.innerHTML = `<strong>You scored ${score} out of ${quizData.length}!</strong>`;
-  resultContainer.className = "score";
+  if(health == 0) {
+    resultContainer.innerHTML = `<strong>GAME OVER!</strong>`;
+    resultContainer.className = "gameOver"
+  } else { 
+    resultContainer.innerHTML = `<strong>You scored ${score} out of ${quizData.length}!</strong>`;
+    resultContainer.className = "score";
+  }
 }
 
 function retryQuiz() {
   currentQuestion = 0;
   score = 0;
+  health = 10;
   incorrectAnswers = [];
   quizContainer.style.display = 'block';
   submitButton.style.display = 'inline-block';
