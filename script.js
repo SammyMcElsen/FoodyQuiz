@@ -233,6 +233,15 @@ function displayQuestion() {
   questionNumberElement.className = 'questionNumber';
   questionNumberElement.innerHTML = (currentQuestion + 1) + "/" + quizData.length;
 
+  const scoreElement = document.createElement('div');
+  scoreElement.innerHTML = "Score: " + score;
+
+  const questionHeader = document.createElement('div');
+  questionHeader.className = 'questionHeader';
+  questionHeader.appendChild(questionNumberElement);
+  questionHeader.appendChild(scoreElement);
+
+
 
   const shuffledOptions = [...questionData.options];
   shuffleArray(shuffledOptions);
@@ -254,7 +263,7 @@ function displayQuestion() {
   }
 
   quizContainer.innerHTML = '';
-  quizContainer.appendChild(questionNumberElement);
+  quizContainer.appendChild(questionHeader);
   quizContainer.appendChild(questionElement);
   quizContainer.appendChild(optionsElement);
 }
