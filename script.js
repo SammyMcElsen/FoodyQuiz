@@ -296,7 +296,7 @@ function displayResult() {
   submitButton.style.display = 'none';
   retryButton.style.display = 'inline-block';
   showAnswerButton.style.display = 'inline-block';
-  resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}!`;
+  resultContainer.innerHTML = `<strong>You scored ${score} out of ${quizData.length}!</strong>`;
   resultContainer.className = "score";
 }
 
@@ -326,13 +326,13 @@ function showAnswer() {
         <strong>Question:</strong> ${incorrectAnswers[i].question}<br>
         <strong>Your Answer:</strong> ${incorrectAnswers[i].incorrectAnswer}<br>
         <strong>Correct Answer:</strong> ${incorrectAnswers[i].correctAnswer}
-      </p>
+      </p><br>
     `;
   }
 
   resultContainer.innerHTML = `
-    <p>You scored ${score} out of ${quizData.length}!</p>
-    <p>Incorrect Answers:</p>
+    <p><strong>You scored ${score} out of ${quizData.length}!</strong></p><br>
+    <p><strong>Incorrect Answers:</strong></p><br>
     ${incorrectAnswersHtml}
   `;
   resultContainer.className = "score";
