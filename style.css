@@ -9,14 +9,22 @@ body {
   font-size: 14px;
   background-color: rgb(253, 221, 226);
 }
+.containerwrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .container {
   width: 450px;
   padding: 20px;
   margin-top: 80px;
-  margin-left: 520px;
   background-color: lavenderblush;
   box-shadow: 0 2px 4px rgb(225, 195, 200);
   border-radius: 20px;
+}
+.container img {
+  height: auto;
+  width: 100%;
 }
 h1 {
   text-align: center;
@@ -76,4 +84,23 @@ h1 {
 }
 .hide {
   display: none;
+}
+.healthwrapper {
+  display: flex;
+  justify-content: center;
+}
+.healthbar {
+  width: 900px;
+  padding: 20px;
+  margin-top: 15px;
+  background-color: lavenderblush;
+  box-shadow: 0 2px 4px rgb(225, 195, 200);
+  border-radius: 20px;
+}
+.healthbar img {
+  width: 90px;
+  height: auto;
+}
+.lostHeart {
+  filter: grayscale(1);
 }
