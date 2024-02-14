@@ -1,4 +1,4 @@
-
+/*jshint esversion: 6 */
 const quizData = [
   {
   question: "Which fast food restaurant's logo features four yellow squares on a blue background?",
@@ -286,7 +286,7 @@ function displayQuestion() {
   questionHeader.appendChild(scoreElement);
 
   const imageElement = document.createElement('img');
-  imageElement.setAttribute('src',questionData.picture)
+  imageElement.setAttribute('src',questionData.picture);
 
 
   healthContainer.className = 'healthbar';
@@ -371,7 +371,7 @@ function displayResult() {
   showAnswerButton.style.display = 'inline-block';
   if(health == 0) {
     resultContainer.innerHTML = `<strong>GAME OVER!</strong>`;
-    resultContainer.className = "gameOver"
+    resultContainer.className = "gameOver";
   } else { 
     resultContainer.innerHTML = `<strong>You scored ${score} out of ${quizData.length}!</strong>`;
     resultContainer.className = "score";

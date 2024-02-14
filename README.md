@@ -62,22 +62,35 @@ These can be played at parties or alone.
 + No bugs or issues found
 
 + Tested the Webpages CSS multiple times with the offical validator.
-+ Bugs found: 
++ No bugs or issues found
 
 + Tested the Webpages JavaScript multiple times with the offical validator.
-+ Bugs found: 
++ No Bugs found 
 
 ## Validator Testing
 
 + HTML
 
+No errors were found when passing through the official [W3C validator]<[def]>
+
 + CSS
+
+No errors were found when passing through the official [(Jigsaw) validator]<https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsammymcelsen.github.io%2FFoodyQuiz.github.io%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en>
 
 + JavaScript
 
+No errors were found when passing through the official [JSHint]<https://jshint.com/>
+
 ## Unfixed Bugs
 
++ None
+
 ## Deployment
+
++ installed GitHub Desktop and VS Code to make changes and test locally.
++ pushed each change with GitHub
++ added to each commit a short describtion about what was changed or added before it being pushed
+The live link can be found here: <https://sammymcelsen.github.io/FoodyQuiz.github.io/>
 
 ## Credits
 
